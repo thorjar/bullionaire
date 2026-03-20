@@ -14,13 +14,13 @@ export default function Navbar() {
 			initial={{ y: -100 }}
 			animate={{ y: 0 }}
 			transition={{ duration: 0.5, ease: 'easeOut' }}
-			className='sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100'
+			className='sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 w-full'
 		>
-			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full'>
 				<div className='flex justify-between items-center h-16'>
 					<motion.a
 						href='#'
-						className='flex items-center gap-2 cursor-pointer'
+						className='flex items-center gap-2 cursor-pointer min-w-0'
 						whileHover={{
 							scale: 1.05,
 							transition: { duration: 0.15 },
@@ -29,9 +29,9 @@ export default function Navbar() {
 						<img
 							src='/logo.png'
 							alt='Bullionaire Logo'
-							className='h-10 w-auto'
+							className='h-10 w-auto flex-shrink-0'
 						/>
-						<span className='text-xl sm:text-2xl font-bold text-deep-blue'>
+						<span className='text-lg sm:text-xl md:text-2xl font-bold text-deep-blue truncate'>
 							BULLIONAIRE
 						</span>
 					</motion.a>
