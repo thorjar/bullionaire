@@ -17,14 +17,18 @@ export default function FeatureCard({
 }: FeatureCardProps) {
 	return (
 		<motion.div
-			className='bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl'
+			className='bg-white p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-xl'
 			initial={{ opacity: 0, y: 60 }}
 			whileInView={{ opacity: 1, y: 0 }}
 			viewport={{ once: true, margin: '-100px' }}
 			transition={{ duration: 0.6, delay }}
 			whileHover={{
-				y: -8,
+				y: 0,
 				transition: { duration: 0.2 },
+			}}
+			whileTap={{
+				y: -4,
+				transition: { duration: 0.15 },
 			}}
 		>
 			<motion.div
@@ -37,7 +41,9 @@ export default function FeatureCard({
 			>
 				{icon}
 			</motion.div>
-			<h3 className='text-2xl font-bold text-deep-blue mb-3'>{title}</h3>
+			<h3 className='text-xl sm:text-2xl font-bold text-deep-blue mb-3'>
+				{title}
+			</h3>
 			<p className='text-gray-600'>{description}</p>
 		</motion.div>
 	);

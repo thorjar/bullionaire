@@ -17,6 +17,8 @@ const membershipTiers = [
 		buttonVariant: 'outline' as const,
 		borderClass: 'border-amber-700',
 		titleClass: 'text-amber-700',
+		buttonClass:
+			'border-amber-700 text-amber-700 hover:bg-amber-700 hover:text-white',
 		delay: 0,
 	},
 	{
@@ -33,6 +35,7 @@ const membershipTiers = [
 		buttonVariant: 'primary' as const,
 		borderClass: 'border-gray-400',
 		titleClass: 'text-gray-500',
+		buttonClass: 'bg-gray-400 text-white hover:bg-gray-500',
 		isPopular: true,
 		delay: 0.1,
 	},
@@ -51,6 +54,8 @@ const membershipTiers = [
 		buttonVariant: 'outline' as const,
 		borderClass: 'border-gold',
 		titleClass: 'gold-text-gradient',
+		buttonClass:
+			'border-gold text-gold-dark hover:bg-gold hover:text-deep-blue',
 		delay: 0.2,
 	},
 ];
@@ -74,7 +79,7 @@ export default function Membership() {
 					</p>
 				</motion.div>
 
-				<div className='grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto'>
+				<div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-5xl mx-auto'>
 					{membershipTiers.map(tier => (
 						<MembershipCard key={tier.name} {...tier} />
 					))}

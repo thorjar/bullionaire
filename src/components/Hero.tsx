@@ -12,14 +12,15 @@ export default function Hero() {
 
 			<div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 				<div className='grid md:grid-cols-2 gap-8 md:gap-12 items-center'>
-					<div className='text-center md:text-left'>
+					{/* Text content - always first */}
+					<div className='text-center md:text-left order-first'>
 						<motion.h1
-							className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6'
+							className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight'
 							initial={{ opacity: 0, y: 60 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.8, delay: 0.2 }}
 						>
-							Become a <span className='gold-text-gradient'>BULLIONAIRE</span>
+							Become a <span className='gold-text-gradient'>BULLIONAIRE.</span>
 							<br className='hidden sm:block' />
 							Own Gold, Digitally.
 						</motion.h1>
@@ -89,9 +90,9 @@ export default function Hero() {
 						</motion.div>
 					</div>
 
-					{/* Visual: Gold bar morphing into digital token */}
+					{/* Visual: Gold bar morphing into digital token - always second */}
 					<motion.div
-						className='flex items-center justify-center order-first md:order-last mb-8 md:mb-0'
+						className='flex items-center justify-center order-last'
 						initial={{ opacity: 0, scale: 0.8 }}
 						animate={{ opacity: 1, scale: 1 }}
 						transition={{ duration: 0.8, delay: 0.4 }}
