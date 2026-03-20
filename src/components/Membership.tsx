@@ -57,25 +57,25 @@ const membershipTiers = [
 
 export default function Membership() {
 	return (
-		<section id='membership' className='py-24 bg-gray-50'>
+		<section id='membership' className='py-16 sm:py-20 md:py-24 bg-gray-50'>
 			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 				<motion.div
-					className='text-center mb-16'
+					className='text-center mb-12 sm:mb-16'
 					initial={{ opacity: 0, y: 40 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true, margin: '-100px' }}
 					transition={{ duration: 0.6 }}
 				>
-					<h2 className='text-4xl font-bold text-deep-blue mb-4'>
+					<h2 className='text-3xl sm:text-4xl font-bold text-deep-blue mb-4'>
 						Membership Tiers
 					</h2>
-					<p className='text-xl text-gray-600 max-w-2xl mx-auto'>
+					<p className='text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4'>
 						Choose your level of access and unlock exclusive benefits
 					</p>
 				</motion.div>
 
-				<div className='grid md:grid-cols-3 gap-8 max-w-5xl mx-auto'>
-					{membershipTiers.map((tier) => (
+				<div className='grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto'>
+					{membershipTiers.map(tier => (
 						<MembershipCard key={tier.name} {...tier} />
 					))}
 				</div>

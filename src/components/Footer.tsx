@@ -29,10 +29,11 @@ const socialIcons = [
 
 export default function Footer() {
 	return (
-		<footer className='bg-deep-blue text-white py-12'>
+		<footer className='bg-deep-blue text-white py-12 sm:py-16'>
 			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-				<div className='grid md:grid-cols-4 gap-8'>
+				<div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
 					<motion.div
+						className='col-span-2 md:col-span-1'
 						initial={{ opacity: 0, x: -40 }}
 						whileInView={{ opacity: 1, x: 0 }}
 						viewport={{ once: true }}
@@ -42,7 +43,7 @@ export default function Footer() {
 							<div className='w-10 h-10 gold-gradient rounded-full flex items-center justify-center'>
 								<span className='text-deep-blue font-bold text-xl'>B</span>
 							</div>
-							<span className='text-2xl font-bold'>BULLIONAIRE</span>
+							<span className='text-xl sm:text-2xl font-bold'>BULLIONAIRE</span>
 						</div>
 						<p className='text-gray-400 text-sm'>
 							The gold standard meets digital revolution. 100% backed by
