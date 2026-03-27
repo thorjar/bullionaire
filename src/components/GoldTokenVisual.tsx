@@ -108,11 +108,11 @@ export default function GoldTokenVisual() {
 						<div className='absolute inset-0 flex items-center justify-center'>
 							<div className='text-center relative z-10'>
 								<img
-									src='/logo.svg'
+									src='SVG/Main-Logo-Icon-black.svg'
 									alt='BULL'
 									className='h-10 sm:h-12 w-auto mx-auto'
 								/>
-								<div className='text-deep-blue/80 text-xs font-bold tracking-widest mt-1'>
+								<div className='text-deep-blue/80 text-xs font-bold tracking-widest mt-3'>
 									GOLD
 								</div>
 							</div>

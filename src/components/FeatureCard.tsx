@@ -17,34 +17,25 @@ export default function FeatureCard({
 }: FeatureCardProps) {
 	return (
 		<motion.div
-			className='bg-white p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-xl'
-			initial={{ opacity: 0, y: 60 }}
+			className='bg-gray-50 p-6 sm:p-8 rounded-2xl border border-gray-100 hover:border-gold/30 hover:shadow-lg transition-all duration-300'
+			initial={{ opacity: 0, y: 40 }}
 			whileInView={{ opacity: 1, y: 0 }}
-			viewport={{ once: true, margin: '-100px' }}
-			transition={{ duration: 0.6, delay }}
+			viewport={{ once: true, margin: '-50px' }}
+			transition={{ duration: 0.5, delay }}
 			whileHover={{
-				y: 0,
+				y: -4,
 				transition: { duration: 0.2 },
 			}}
-			whileTap={{
-				y: -4,
-				transition: { duration: 0.15 },
-			}}
 		>
-			<motion.div
-				className='w-16 h-16 gold-gradient rounded-2xl flex items-center justify-center mb-6'
-				whileHover={{
-					scale: 1.1,
-					rotate: 5,
-					transition: { duration: 0.2 },
-				}}
-			>
+			<div className='w-12 h-12 sm:w-14 sm:h-14 bg-gold/20 rounded-xl flex items-center justify-center mb-4 sm:mb-6 text-deep-blue'>
 				{icon}
-			</motion.div>
-			<h3 className='text-xl sm:text-2xl font-bold text-deep-blue mb-3'>
+			</div>
+			<h3 className='text-lg sm:text-xl font-semibold text-deep-blue mb-2 sm:mb-3 tracking-tight'>
 				{title}
 			</h3>
-			<p className='text-gray-600'>{description}</p>
+			<p className='text-sm sm:text-base text-gray-600 leading-relaxed'>
+				{description}
+			</p>
 		</motion.div>
 	);
 }

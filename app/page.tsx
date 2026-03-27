@@ -1,10 +1,13 @@
 import {
 	Navbar,
 	Hero,
-	Features,
-	HowItWorks,
-	Membership,
-	CTA,
+	WhyGold,
+	Economy,
+	SavingsSolution,
+	Education,
+	LockIn,
+	Partners,
+	PrivateLaunch,
 	Footer,
 } from '@/components';
 
@@ -13,10 +16,13 @@ export default function Home() {
 		<div className='flex flex-col flex-1 bg-white'>
 			<Navbar />
 			<Hero />
-			<Features />
-			<HowItWorks />
-			<Membership />
-			<CTA />
+			<WhyGold />
+			<Economy />
+			<SavingsSolution />
+			<Education />
+			<LockIn />
+			<Partners />
+			<PrivateLaunch />
 			<Footer />
 		</div>
 	);

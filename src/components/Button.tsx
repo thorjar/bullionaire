@@ -7,6 +7,8 @@ interface ButtonProps {
 	className?: string;
 	variant?: 'primary' | 'secondary' | 'outline';
 	onClick?: () => void;
+	type?: 'button' | 'submit' | 'reset';
+	disabled?: boolean;
 }
 
 export default function Button({
@@ -14,23 +16,27 @@ export default function Button({
 	className = '',
 	variant = 'primary',
 	onClick,
+	type = 'button',
+	disabled = false,
 }: ButtonProps) {
-	const baseStyles = 'px-6 py-3 rounded-full font-semibold btn-hover shadow-md';
+	const baseStyles =
+		'px-6 py-3 rounded-xl font-medium transition-all duration-200 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed';
 
 	const variants = {
-		primary: 'gold-gradient text-deep-blue',
-		secondary: 'border-2 border-white text-white',
-		outline: 'border-2 border-amber-700 text-amber-700',
+		primary:
+			'gold-gradient text-deep-blue hover:opacity-90 shadow-lg hover:shadow-xl',
+		secondary: 'bg-deep-blue text-white hover:bg-deep-blue-light shadow-md',
+		outline:
+			'border-2 border-deep-blue text-deep-blue hover:bg-deep-blue hover:text-white',
 	};
 
 	return (
 		<motion.button
+			type={type}
+			disabled={disabled}
 			className={`${baseStyles} ${variants[variant]} ${className}`}
-			whileHover={{
-				scale: 1.05,
-				transition: { duration: 0.15 },
-			}}
-			whileTap={{ scale: 0.95, transition: { duration: 0.1 } }}
+			whileHover={disabled ? undefined : { scale: 1.02 }}
+			whileTap={disabled ? undefined : { scale: 0.98 }}
 			onClick={onClick}
 		>
 			{children}

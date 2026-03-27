@@ -24,8 +24,8 @@ export const metadata: Metadata = {
 		'blockchain',
 	],
 	icons: {
-		icon: '/logo.svg',
-		apple: '/logo.svg',
+		icon: 'Favicon/32x32/Favicon-Gold.png',
+		apple: 'Favicon/192x192/Favicon-Gold.png',
 	},
 	openGraph: {
 		title: 'BULLIONAIRE | Gold-Backed Digital Coin',
