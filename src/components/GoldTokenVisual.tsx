@@ -46,12 +46,11 @@ export default function GoldTokenVisual() {
 					{/* Center content */}
 					<div className='absolute inset-0 flex items-center justify-center'>
 						<div className='text-center relative z-10'>
-							<span
-								className='text-deep-blue font-bold text-2xl sm:text-3xl block'
-								style={{ textShadow: '0 1px 2px rgba(255,255,255,0.5)' }}
-							>
-								BULLION
-							</span>
+							<img
+								src='SVG/Gold-white-Vertical (2).svg'
+								alt='BULL'
+								className='h-10 sm:h-12 w-auto mx-auto'
+							/>
 							<div className='text-deep-blue/70 text-xs font-bold tracking-widest mt-1'>
 								999.9 GOLD
 							</div>
@@ -108,7 +107,7 @@ export default function GoldTokenVisual() {
 						<div className='absolute inset-0 flex items-center justify-center'>
 							<div className='text-center relative z-10'>
 								<img
-									src='SVG/Main-Logo-Icon-black.svg'
+									src='SVG/Main-Logo-Icon-gold.svg'
 									alt='BULL'
 									className='h-10 sm:h-12 w-auto mx-auto'
 								/>
