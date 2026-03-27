@@ -64,10 +64,6 @@ export default function Partners() {
 						<motion.div
 							key={index}
 							className='text-center p-4 sm:p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:border-gold/30 transition-all duration-300'
-							initial={{ opacity: 0, y: 30 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							viewport={{ once: true, margin: '-50px' }}
-							transition={{ duration: 0.5, delay: index * 0.1 }}
 							whileHover={{
 								y: -4,
 								transition: { duration: 0.2 },

@@ -40,21 +40,23 @@ export default function FAQ() {
 		<div className='flex flex-col flex-1 bg-white'>
 			<Navbar />
 
-			<PageHeader eyebrow='FAQ' title='Frequently Asked Questions' />
+			<div className='pt-14 sm:pt-16'>
+				<PageHeader eyebrow='FAQ' title='Frequently Asked Questions' />
 
-			<section className='py-20 sm:py-24 bg-white'>
-				<div className='max-w-3xl mx-auto px-4 sm:px-6 lg:px-8'>
-					<FAQList items={faqs} />
-				</div>
-			</section>
+				<section className='py-20 sm:py-24 bg-white'>
+					<div className='max-w-3xl mx-auto px-4 sm:px-6 lg:px-8'>
+						<FAQList items={faqs} />
+					</div>
+				</section>
 
-			<CTA
-				title='Still Have Questions?'
-				description='Our team is here to help you understand the Bullionaire opportunity.'
-				buttonText='Contact Us'
-			/>
+				<CTA
+					title='Still Have Questions?'
+					description='Our team is here to help you understand the Bullionaire opportunity.'
+					buttonText='Contact Us'
+				/>
 
-			<Footer />
+				<Footer />
+			</div>
 		</div>
 	);
 }

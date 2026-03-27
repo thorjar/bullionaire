@@ -66,14 +66,7 @@ export default function SavingsSolution() {
 
 				<div className='grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6'>
 					{points.map((point, index) => (
-						<motion.div
-							key={index}
-							className='text-center p-4 sm:p-6'
-							initial={{ opacity: 0, y: 30 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							viewport={{ once: true, margin: '-50px' }}
-							transition={{ duration: 0.5, delay: index * 0.1 }}
-						>
+						<motion.div key={index} className='text-center p-4 sm:p-6'>
 							<div className='w-14 h-14 sm:w-16 sm:h-16 bg-gold/20 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 text-deep-blue'>
 								{point.icon}
 							</div>

@@ -40,13 +40,7 @@ export default function LockIn() {
 					</p>
 				</motion.div>
 
-				<motion.div
-					className='grid sm:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12'
-					initial={{ opacity: 0, y: 30 }}
-					whileInView={{ opacity: 1, y: 0 }}
-					viewport={{ once: true, margin: '-50px' }}
-					transition={{ duration: 0.6, delay: 0.2 }}
-				>
+				<motion.div className='grid sm:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12'>
 					<div className='bg-white p-4 sm:p-6 rounded-2xl shadow-sm border border-gray-100'>
 						<Lock
 							size={36}
@@ -88,13 +82,7 @@ export default function LockIn() {
 					</div>
 				</motion.div>
 
-				<motion.div
-					className='bg-deep-blue text-white p-6 sm:p-8 rounded-2xl'
-					initial={{ opacity: 0, y: 30 }}
-					whileInView={{ opacity: 1, y: 0 }}
-					viewport={{ once: true, margin: '-50px' }}
-					transition={{ duration: 0.6, delay: 0.3 }}
-				>
+				<motion.div className='bg-deep-blue text-white p-6 sm:p-8 rounded-2xl'>
 					<p className='text-gold font-semibold text-lg sm:text-xl italic'>
 						&quot;Bullionaire is designed for people who want to build with
 						intention, not chase noise.&quot;

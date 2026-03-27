@@ -21,13 +21,7 @@ export default function StepCard({
 }: StepCardProps) {
 	if (horizontal) {
 		return (
-			<motion.div
-				className='flex gap-4 sm:gap-6 items-start p-4 sm:p-6 bg-gray-50 rounded-2xl'
-				initial={{ opacity: 0, x: -40 }}
-				whileInView={{ opacity: 1, x: 0 }}
-				viewport={{ once: true, margin: '-50px' }}
-				transition={{ duration: 0.5, delay: index * 0.1 }}
-			>
+			<motion.div className='flex gap-4 sm:gap-6 items-start p-4 sm:p-6 bg-gray-50 rounded-2xl'>
 				<div className='flex-shrink-0'>
 					<div className='w-16 h-16 sm:w-20 sm:h-20 bg-gold/20 rounded-2xl flex items-center justify-center text-deep-blue'>
 						{icon}
@@ -51,13 +45,7 @@ export default function StepCard({
 	}
 
 	return (
-		<motion.div
-			className='text-center p-4 sm:p-6'
-			initial={{ opacity: 0, y: 30 }}
-			whileInView={{ opacity: 1, y: 0 }}
-			viewport={{ once: true, margin: '-50px' }}
-			transition={{ duration: 0.5, delay: index * 0.1 }}
-		>
+		<motion.div className='text-center p-4 sm:p-6'>
 			<div className='w-14 h-14 sm:w-16 sm:h-16 bg-gold/20 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 text-deep-blue text-xl sm:text-2xl font-bold'>
 				{step}
 			</div>

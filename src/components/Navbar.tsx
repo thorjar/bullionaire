@@ -58,7 +58,7 @@ export default function Navbar() {
 			initial={{ y: -100 }}
 			animate={{ y: 0 }}
 			transition={{ duration: 0.5, ease: 'easeOut' }}
-			className={`sticky top-0 z-50 w-full transition-shadow duration-300 ${
+			className={`fixed top-0 z-50 w-full transition-shadow duration-300 ${
 				isScrolled
 					? 'bg-white/95 backdrop-blur-md shadow-md'
 					: 'bg-white/90 backdrop-blur-md'

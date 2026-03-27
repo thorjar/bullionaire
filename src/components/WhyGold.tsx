@@ -63,10 +63,6 @@ export default function WhyGold() {
 						<motion.div
 							key={index}
 							className='bg-gray-50 p-6 sm:p-8 rounded-2xl border border-gray-100 hover:border-gold/30 hover:shadow-lg transition-all duration-300'
-							initial={{ opacity: 0, y: 40 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							viewport={{ once: true, margin: '-50px' }}
-							transition={{ duration: 0.5, delay: index * 0.1 }}
 							whileHover={{
 								y: -4,
 								transition: { duration: 0.2 },

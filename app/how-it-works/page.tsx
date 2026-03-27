@@ -35,40 +35,42 @@ export default function HowItWorks() {
 		<div className='flex flex-col flex-1 bg-white'>
 			<Navbar />
 
-			<PageHeader
-				eyebrow='How Bullionaire Works'
-				title='A Community-Led Gold Platform'
-				description='Bullionaire combines a gold-focused product story with a community-led sharing model designed to help more people discover and participate in real value.'
-			/>
+			<div className='pt-14 sm:pt-16'>
+				<PageHeader
+					eyebrow='How Bullionaire Works'
+					title='A Community-Led Gold Platform'
+					description='Bullionaire combines a gold-focused product story with a community-led sharing model designed to help more people discover and participate in real value.'
+				/>
 
-			{/* Steps */}
-			<section className='py-20 sm:py-24 bg-white'>
-				<div className='max-w-5xl mx-auto px-4 sm:px-6 lg:px-8'>
-					<div className='space-y-8'>
-						{steps.map((item, index) => (
-							<StepCard key={index} {...item} index={index} horizontal />
-						))}
+				{/* Steps */}
+				<section className='py-20 sm:py-24 bg-white'>
+					<div className='max-w-5xl mx-auto px-4 sm:px-6 lg:px-8'>
+						<div className='space-y-8'>
+							{steps.map((item, index) => (
+								<StepCard key={index} {...item} index={index} horizontal />
+							))}
+						</div>
+
+						<div className='mt-16 p-6 bg-amber-50 border border-amber-200 rounded-xl'>
+							<p className='text-amber-800 text-sm leading-relaxed'>
+								<strong>Compliance Note:</strong> This section is intentionally
+								framed around product engagement and customer participation, not
+								income promises. That is the safer way to position it publicly.
+								FTC guidance is explicit that misleading or unsubstantiated
+								earnings claims are a risk area for MLM businesses and
+								participants.
+							</p>
+						</div>
 					</div>
+				</section>
 
-					<div className='mt-16 p-6 bg-amber-50 border border-amber-200 rounded-xl'>
-						<p className='text-amber-800 text-sm leading-relaxed'>
-							<strong>Compliance Note:</strong> This section is intentionally
-							framed around product engagement and customer participation, not
-							income promises. That is the safer way to position it publicly.
-							FTC guidance is explicit that misleading or unsubstantiated
-							earnings claims are a risk area for MLM businesses and
-							participants.
-						</p>
-					</div>
-				</div>
-			</section>
+				<CTA
+					title='Ready to Start Your Gold Journey?'
+					description='Join Bullionaire and become part of a growing gold-focused ecosystem built around value, education, and community.'
+				/>
 
-			<CTA
-				title='Ready to Start Your Gold Journey?'
-				description='Join Bullionaire and become part of a growing gold-focused ecosystem built around value, education, and community.'
-			/>
-
-			<Footer />
+				<Footer />
+			</div>
 		</div>
 	);
 }
